@@ -2,10 +2,13 @@
   "name": "@figma/my-make-file",
   "private": true,
   "version": "0.0.1",
+  "homepage": "https://github.com/waqaskhan0/waqaskhan0.github.io.git",
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "dev": "vite"
+    "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@radix-ui/react-slot": "1.1.2",
