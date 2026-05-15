@@ -95,11 +95,17 @@ export function Projects() {
                       <project.icon className="w-6 h-6 text-white" />
                     </motion.div>
                     <div className="flex space-x-2">
-                      <Button size="sm" variant="ghost" className="text-gray-400 hover:text-blue-400">
-                        <ExternalLink size={16} />
-                      </Button>
-                      <Button size="sm" variant="ghost" className="text-gray-400 hover:text-blue-400">
-                        <Github size={16} />
+                      {project.demo !== "#" && (
+                        <Button asChild size="sm" variant="ghost" className="text-gray-400 hover:text-blue-400">
+                          <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} demo`}>
+                            <ExternalLink size={16} />
+                          </a>
+                        </Button>
+                      )}
+                      <Button asChild size="sm" variant="ghost" className="text-gray-400 hover:text-blue-400">
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} GitHub repository`}>
+                          <Github size={16} />
+                        </a>
                       </Button>
                     </div>
                   </div>
